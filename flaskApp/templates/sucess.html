@@ -25,10 +25,71 @@
       >
     </nav>
     <div class="container m-auto p-3">
-      <div class="row m-3">
+      <div class="row">
         <div class="col-8">
-          <h3>Car Categorical to Numericals ( Table ):</h3>
-          
+          <h3 class="bg-info text-light p-3"
+          >Car Categorical to Numericals ( Table ):</h3>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Feature Name</th>
+                <th scope="col">Numerical</th>
+                <th scope="col">Categorical</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Buying Cost</td>
+                <td>{{ profile['buying'] }}</td>
+                <td>{{ profile['buyingCat'][intFunc(profile['buying'])] }}</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Maintianace Cost</td>
+                <td>{{ profile['maint'] }}</td>
+                <td>{{ profile['maintCat'][intFunc(profile['maint'])] }}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Total No. of Doors</td>
+                <td>{{ profile['doors'] }}</td>
+                <td>{{ intFunc(profile['doors']) }}</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Max. Person Capacity</td>
+                <td>{{ profile['persons'] }}</td>
+                <td>
+                  {{ intFunc(profile['persons']) }}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Luggage Spacing</td>
+                <td>{{ profile['lug_boot'] }}</td>
+                <td>
+                  {{ profile['lug_bootCat'][intFunc(profile['lug_boot'])] }}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Safty Rating</td>
+                <td>{{ profile['safety'] }}</td>
+                <td>{{ profile['safetyCat'][intFunc(profile['safety'])] }}</td>
+              </tr>
+              <tr class="bg-info text-white font-weight-bold">
+                <th scope="col">[*]</th>
+                <td scope="col">Prection Score</td>
+                <td scope="col">{{ profile['carPred'] }}</td>
+                <td scope="col">
+                  {{ profile['qualityCat'][intFunc(profile['carPred'])] }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="col-4">
           <img

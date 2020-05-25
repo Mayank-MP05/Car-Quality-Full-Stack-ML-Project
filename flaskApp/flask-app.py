@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, abort ,url_for
+from flask import Flask, render_template, redirect, request, abort, url_for
 
 # Form Code
 from flask_wtf import FlaskForm
@@ -21,15 +21,15 @@ app.config['WTF_CSRF_ENABLED'] = False
 def getAllData():
     carProfile = {}
     # Categorical <--> Numerical
-    carProfile['buyingCat'] = ['High','Low','Medium','Very High']
+    carProfile['buyingCat'] = ['High', 'Low', 'Medium', 'Very High']
     carProfile['maintCat'] = carProfile['buyingCat']
     # carProfile['doorsCat'] = []
     # carProfile['personsCat'] = []
-    carProfile['lug_bootCat'] = ['Big Space','Medium Space','Small Space']
-    carProfile['safetyCat'] = ['High','Low','Medium']
+    carProfile['lug_bootCat'] = ['Big Space', 'Medium Space', 'Small Space']
+    carProfile['safetyCat'] = ['High', 'Low', 'Medium']
     # This on is for the Predicted Quality of the Car
-    carProfile['qualityCat'] = ['Acceptable','Good','Unacceptable','Very Good']
-
+    carProfile['qualityCat'] = ['Acceptable',
+                                'Good', 'Unacceptable', 'Very Good']
 
     # Only POST request Allowed
     if request.method == "POST":
@@ -59,7 +59,7 @@ def getAllData():
         carProfile["carPred"] = pred
 
         # sending response to car profile
-        return render_template('sucess.html', profile=carProfile)
+        return render_template('sucess.html', profile=carProfile, intFunc=int)
     else:
         return abort(400)
 
