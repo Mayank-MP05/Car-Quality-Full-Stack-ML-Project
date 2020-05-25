@@ -33,6 +33,6 @@ safety: low, med, high.
 12. Show user the Outputs
 
 #### Screenshots of the Web App
-![Landing Page : User selects the condition of car]('https://raw.githubusercontent.com/Mayank-MP05/Car-Quality-Full-Stack-ML-Project/master/screenshots/home.PNG')
+![Landing Page : User selects the condition of car](https://raw.githubusercontent.com/Mayank-MP05/Car-Quality-Full-Stack-ML-Project/master/screenshots/home.PNG)
 
-![Result Page : User Get the Output of Model Prediction]('https://raw.githubusercontent.com/Mayank-MP05/Car-Quality-Full-Stack-ML-Project/master/screenshots/results.PNG')
+![Result Page : User Get the Output of Model Prediction](https://raw.githubusercontent.com/Mayank-MP05/Car-Quality-Full-Stack-ML-Project/master/screenshots/results.PNG)
