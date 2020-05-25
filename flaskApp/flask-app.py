@@ -15,12 +15,16 @@ app.config['WTF_CSRF_ENABLED'] = False
 
 @app.route('/submit', methods=('GET', 'POST'))
 def getAllData():
-    profile = {}
+    carProfile = {}
     if request.method == "POST":
-        profile['username'] = request.form["name"]
-        profile['buying'] = request.form["buying"]
+        carProfile['buying'] = request.form["buying"]
+        carProfile['maint'] = request.form["maint"]
+        carProfile['doors'] = request.form["doors"]
+        carProfile['persons'] = request.form["persons"]
+        carProfile['lug_boot'] = request.form["lug_boot"]
+        carProfile['safety'] = request.form["safety"]
 
-    return render_template('sucess.html', profile=profile)
+    return render_template('sucess.html', profile=carProfile)
 
 
 @app.route('/')
