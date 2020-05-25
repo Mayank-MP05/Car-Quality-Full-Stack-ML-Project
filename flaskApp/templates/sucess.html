@@ -3,16 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THis is the Succes Flask APp</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <title>Results : Car Evaluation Dataset</title>
+    <style>
+      .sticky-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
   </head>
+
   <body>
-    <h2>buyin : {{ profile.buying }}</h2>
-    <h2>maint {{ profile.maint }}</h2>
-    <h2>doors : {{ profile.doors }}</h2>
-    <h2>perso : {{ profile.persons }}</h2>
-    <h2>lug_b : {{ profile.lug_boot }}</h2>
-    <h2>safet : {{ profile.safety }}</h2>
-    <h2>Predcition : {{ profile.carPred }}</h2>
-    <br />
+    <nav class="navbar navbar-light bg-primary text-light sticky-top">
+      <span class="navbar-brand text-light mb-0 h1"
+        >🚗 Car Evaluation => Results</span
+      >
+    </nav>
+    <div class="container m-auto p-3">
+      <div class="row m-3">
+        <div class="col-8">
+          <h3>Car Categorical to Numericals ( Table ):</h3>
+          
+        </div>
+        <div class="col-4">
+          <img
+            src="{{url_for('static', filename='dummyCar.jpg')}}"
+            alt="Your Expected Car Image"
+            class="img img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-light bg-primary text-light sticky-bottom text-center justify-content-center"
+    >
+      <p>
+        Dataset Link :
+        <a
+          class="text-light"
+          href="https://archive.ics.uci.edu/ml/datasets/Car+Evaluation"
+          >https://archive.ics.uci.edu/ml/datasets/Car+Evaluation</a
+        >
+
+        <br />
+
+        Made with ❤ by
+        <a class="text-light" href="https://github.com/Mayank-MP05"
+          >@Mayank_MP5</a
+        >
+      </p>
+    </nav>
   </body>
 </html>

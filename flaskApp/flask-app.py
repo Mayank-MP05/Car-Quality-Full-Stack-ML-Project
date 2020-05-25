@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, abort
+from flask import Flask, render_template, redirect, request, abort ,url_for
 
 # Form Code
 from flask_wtf import FlaskForm
@@ -20,6 +20,17 @@ app.config['WTF_CSRF_ENABLED'] = False
 @app.route('/submit', methods=('GET', 'POST'))
 def getAllData():
     carProfile = {}
+    # Categorical <--> Numerical
+    carProfile['buyingCat'] = ['High','Low','Medium','Very High']
+    carProfile['maintCat'] = carProfile['buyingCat']
+    # carProfile['doorsCat'] = []
+    # carProfile['personsCat'] = []
+    carProfile['lug_bootCat'] = ['Big Space','Medium Space','Small Space']
+    carProfile['safetyCat'] = ['High','Low','Medium']
+    # This on is for the Predicted Quality of the Car
+    carProfile['qualityCat'] = ['Acceptable','Good','Unacceptable','Very Good']
+
+
     # Only POST request Allowed
     if request.method == "POST":
         carProfile['buying'] = request.form["buying"]

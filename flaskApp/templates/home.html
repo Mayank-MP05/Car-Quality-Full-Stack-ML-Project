@@ -3,73 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THis is the BAsic Flask APp</title>
+    <title>Car Evaluation Machine Learnig Project</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
+    <style>
+      .sticky-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
   </head>
   <body>
-    <div class="container m-auto w-50">
-      <form method="POST" action="/submit" class="p-2">
-        <div class="form-group">
-          <label>Car Buying Price</label>
-          <select class="form-control" name="buying">
-            <option value="3">Very High</option>
-            <option value="0">High</option>
-            <option value="2">Medium</option>
-            <option value="1">Low</option>
-          </select>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-primary text-light sticky-top">
+      <span class="navbar-brand text-light mb-0 h1"
+        >🚗 Car Evaluation Decision Tree Model</span
+      >
+    </nav>
+    <div class="container m-3 p-3">
+      <form method="POST" action="/submit" class="p-1 card m-auto w-50">
+        <div class="d-flex p-1">
+          <div class="form-group w-50">
+            <label>Car Buying Price</label>
+            <select class="form-control" name="buying">
+              <option value="3">Very High</option>
+              <option value="0">High</option>
+              <option value="2">Medium</option>
+              <option value="1">Low</option>
+            </select>
+          </div>
+
+          <div class="form-group w-50">
+            <label>Car Maintainance Price</label>
+            <select class="form-control" name="maint">
+              <option value="3">Very High</option>
+              <option value="0">High</option>
+              <option value="2">Medium</option>
+              <option value="1">Low</option>
+            </select>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label>Car Maintainance Price</label>
-          <select class="form-control" name="maint">
-            <option value="3">Very High</option>
-            <option value="0">High</option>
-            <option value="2">Medium</option>
-            <option value="1">Low</option>
-          </select>
+        <div class="d-flex p-1">
+          <div class="form-group w-50">
+            <label>Doors</label>
+            <select class="form-control" name="doors">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+
+          <div class="form-group w-50">
+            <label>Persons</label>
+            <select class="form-control" name="persons">
+              <option value="2">2</option>
+              <option value="4">4</option>
+              <option value="6">more</option>
+            </select>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label>Doors</label>
-          <select class="form-control" name="doors">
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5+</option>
-          </select>
-        </div>
+        <div class="d-flex p-1">
+          <div class="form-group w-50">
+            <label>Luggage Bootspace</label>
+            <select class="form-control" name="lug_boot">
+              <option value="2">small</option>
+              <option value="1">medium</option>
+              <option value="0">big</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label>Persons</label>
-          <select class="form-control" name="persons">
-            <option value="2">2</option>
-            <option value="4">4</option>
-            <option value="6">more</option>
-          </select>
+          <div class="form-group w-50">
+            <label>Safety</label>
+            <select class="form-control" name="safety">
+              <option value="1">Low</option>
+              <option value="2">Medium</option>
+              <option value="0">High</option>
+            </select>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label>Luggage Bootspace</label>
-          <select class="form-control" name="lug_boot">
-            <option value="2">small</option>
-            <option value="1">medium</option>
-            <option value="0">big</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Safety</label>
-          <select class="form-control" name="safety">
-            <option value="1">Low</option>
-            <option value="2">Medium</option>
-            <option value="0">High</option>
-          </select>
-        </div>
-        <input type="submit" class="btn btn-success m-auto w-25" />
+        <input
+          type="submit"
+          class="btn btn-success w-75 m-auto"
+          value="Check Your Car ..."
+        />
       </form>
     </div>
+
+    <nav
+      class="navbar navbar-light bg-primary text-light sticky-bottom text-center justify-content-center"
+    >
+      <p>
+        Dataset Link :
+        <a
+          class="text-light"
+          href="https://archive.ics.uci.edu/ml/datasets/Car+Evaluation"
+          >https://archive.ics.uci.edu/ml/datasets/Car+Evaluation</a
+        >
+
+        <br />
+
+        Made with ❤ by
+        <a class="text-light" href="https://github.com/Mayank-MP05"
+          >@Mayank_MP5</a
+        >
+      </p>
+    </nav>
   </body>
 </html>
