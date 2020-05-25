@@ -42,8 +42,12 @@ def getAllData():
             'lug_boot': [carProfile['lug_boot']],
             'safety': [carProfile['safety']]
         })
+
+        # Getting and saving response in carProfile
         pred = model.predict(carTest)
         carProfile["carPred"] = pred
+
+        # sending response to car profile
         return render_template('sucess.html', profile=carProfile)
     else:
         return abort(400)
