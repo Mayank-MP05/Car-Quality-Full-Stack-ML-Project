@@ -4,17 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THis is the BAsic Flask APp</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
   </head>
   <body>
-    <form method="POST" action="/submit">
-      <input type="text" name="name" />
-      <select name="buying">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-      </select>
-      <input type="submit" value="Go" />
-    </form>
+    <div class="container m-auto w-50">
+      <form method="POST" action="/submit">
+        <div class="form-group">
+          <label>Car Buying Price</label>
+          <select class="form-control" name="buying">
+            <option>Very High</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Car Maintainance Price</label>
+          <select class="form-control" name="maint">
+            <option>Very High</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Doors</label>
+          <select class="form-control" name="doors">
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Persons</label>
+          <select class="form-control" name="persons">
+            <option>2</option>
+            <option>4</option>
+            <option>more</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Luggage Bootspace</label>
+          <select class="form-control" name="doors">
+            <option>small</option>
+            <option>medium</option>
+            <option>big</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Safety</label>
+          <select class="form-control" name="doors">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+        <input type="submit" class="btn btn-success m-auto w-25" />
+      </form>
+    </div>
   </body>
 </html>
